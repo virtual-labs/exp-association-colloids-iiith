@@ -1,13 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset = "utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Add CSS at the head of HTML file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="./css/main.css">
-</head>
-<body>
-		<!-- Your code goes here-->
+    <title>Structure Of Soap</title>
 
+</head>
+    <body>
+		<!-- Your code goes here-->
+        <div class="container-fluid links" >
+            <nav class="navbar navbar-custon">
+                <ul class="nav navbar-nav h3">
+                    <li class="nav-link activeLink"><a href="#" >Structure of soap</a></li>
+                    <li class="nav-link" ><a href="./cleansingAction.html">Cleansing action of soap</a></li>
+                    <li class="nav-link"><a href="./micelleFormation.html">Formation of micelle</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container justify-content-center" id="main">
+            <div class="grid">
+                <div class="row">
+                    <h1 class = "title">Move your pointer over individual parts parts of soap molecule below to see their description...</h1>
+                </div>
+                <div class="row text-center" style="font-size: 0;">
+                    <img id="micelle-tail" onmouseover="showMicelleInformation('tail')" onmouseout="hideTailInformation()" src="./images/tail.svg" alt="Micelle tail">
+                    <img id="micelle-head" onmouseover="showMicelleInformation('head')" onmouseout="hideHeadInformation()" src="./images/head.svg" alt="Micelle head">
+                </div>
+                <div class="row text-center justify-content-center">
+                    <div id="micelle-information"></div>
+                </div>
+            </div>
+        </div>    
 	<!-- Add JS at the bottom of HTML file --> 
         <script src="./js/main.js"></script>
-</body>
+    </body> 
 </html>
