@@ -1,1 +1,219 @@
-/* You CSS goes in here */
+#main{
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.title {
+    text-align: center;
+    font-size: 2.5vw;
+    z-index: -1;
+}
+
+.links{
+    padding: 0px;
+}
+
+.nav-link ,.nav ,.navbar-nav,.navbar ,.navbar-custom{
+    background-color: rgb(151, 202, 61);
+    color: rgb(21,100,156) ;
+
+}
+
+.activeLink{
+    background-color: rgb(151, 220, 61);
+}
+.nav>li>a:focus,.nav>li>a:hover{
+    background-color: rgb(151, 210, 61);
+    color: rgb(21,100,156) ;
+}
+
+#procedureMessage {
+    text-align: center;
+    background-color: yellow;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4vw;
+}
+
+.molecularView, .dropping-objects{
+    position: relative;
+}
+
+
+#micelle-head{
+    margin-top: 70px;   
+}
+
+#micelle-tail{
+    margin-top: 90px;
+}
+
+#micelle-head:hover, #micelle-tail:hover{
+    transform: scale(1.2);
+    transition: all 1s ease;
+}
+
+.img-micelle{
+    padding-top: 60px;
+}
+
+#micelle-information{
+    font-size: 2vw;
+}
+
+#bench {
+    z-index: -1;
+    position: absolute;
+    align-self: center; 
+    object-fit: cover;
+    top: 10vw;
+    width: 78vw;
+    left: 10vw;
+}
+
+#spoon1, #spoon2, #spoon3{
+    position: absolute;
+    align-self: center;
+    object-fit: cover;
+    top: 1vw;
+    right: 10vw;
+    width: 15vw;
+}
+
+#detergent1,#detergent2,#detergent3{
+    position: absolute;
+    align-self: center;
+    object-fit: cover;
+    top: 3vw;
+    right: 19vw;
+    width: 6vw;
+}
+
+#spoon2, #spoon3, #detergent2, #detergent3{
+    opacity: 0;
+}
+
+#glassRod{
+    z-index: -1;
+    position: absolute;
+    align-self: center;
+    object-fit: cover;
+    top: 13vw;
+    left: 24vw;
+    width: 19vw;
+    opacity: 0;
+}
+
+#clothWithStain{
+    position: absolute;
+    align-self: center;
+    object-fit: cover;
+    top: 3vw;
+    left: 29vw;
+    width: 6vw;
+    opacity: 0;
+}
+
+#plainCloth{
+    position: absolute;
+    align-self: center;
+    object-fit: cover;
+    top: 25vw;
+    left: 29vw;
+    width: 7vw;
+    opacity: 0;
+}
+
+#videoMessage{
+    position: absolute; 
+    top: 45vw;
+    left: 20%;
+    font-size: 3vw;
+    display: none;
+}
+
+#videos{
+    position: absolute;
+    top: 55vw;
+    display: none;
+}
+
+@media only screen and (max-width: 700px){
+    .title{
+        font-size: 5vw;
+    }
+    .a-btn{
+        font-size: 3vw;
+    }
+    #micelle-tail{
+        margin-top: 80px;
+        width: 150px;
+    }
+    #micelle-head{
+        width: 50px;
+    }
+    #micelle-information{
+        font-size: 5vw;
+    }
+    #procedureMessage{
+        font-size: 3vw;
+    }
+    #videoMessage{
+        left: 10%;
+        font-size: 4vw;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    #bench {
+        z-index: -1;
+        top: 10vw;
+        width: 50vw;
+        left: 10vw;
+    }
+    
+    #spoon1, #spoon2, #spoon3{
+        top: 1vw;
+        right: 25vw;
+        width: 7vw;
+    }
+    
+    #detergent1,#detergent2,#detergent3{
+        top: 2vw;
+        right: 29vw;
+        width: 3vw;
+    }
+
+    #glassRod{
+        z-index: -1;
+        top: 12vw;
+        left: 19vw;
+        width: 12vw;
+        opacity: 0;
+    }
+    
+    #clothWithStain{
+        top: 2vw;
+        left: 23vw;
+        width: 4vw;
+        opacity: 0;
+    }
+    
+    #plainCloth{
+        top: 20vw;
+        left: 23vw;
+        width: 4vw;
+        opacity: 0;
+    }
+
+    #videoMessage{
+        top: 7vw;
+        left: 70vw;
+        width: 20%;
+        font-size: 1vw;
+    }
+    #videos{
+        top: 10vw;
+        right: -30vw;
+    }
+}
