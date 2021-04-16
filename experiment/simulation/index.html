@@ -18,6 +18,7 @@
         <div class="container-fluid links" >
             <nav class="navbar navbar-custon">
                 <ul class="nav navbar-nav h3">
+                    <!-- Links for other parts of experiment -->
                     <li class="nav-link activeLink"><a href="#" >Structure of soap</a></li>
                     <li class="nav-link" ><a href="./cleansingAction.html">Cleansing action of soap</a></li>
                     <li class="nav-link"><a href="./micelleFormation.html">Formation of micelle</a></li>
@@ -27,8 +28,11 @@
         <div class="container justify-content-center" id="main">
             <div class="grid">
                 <div class="row">
-                    <h1 class = "title">Move your pointer over individual parts parts of soap molecule below to see their description...</h1>
+                    <!-- Instruction messages about how to perform the experiment -->
+                    <h3>Instructions:</h3>
+                    <div id = "procedureMessage">Move your pointer over individual parts parts of soap molecule below to see their description...</div>
                 </div>
+                <!-- The main visual div -->
                 <div class="row text-center" style="font-size: 0;">
                     <img id="micelle-tail" onmouseover="showMicelleInformation('tail')" onmouseout="hideTailInformation()" src="./images/tail.svg" alt="Micelle tail">
                     <img id="micelle-head" onmouseover="showMicelleInformation('head')" onmouseout="hideHeadInformation()" src="./images/head.svg" alt="Micelle head">
