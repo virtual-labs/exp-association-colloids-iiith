@@ -18,12 +18,13 @@
         <div class="container-fluid links" >
             <nav class="navbar navbar-custom">
                 <ul class="nav navbar-nav h3">
+                    <!-- Links for other parts of experiment -->
                     <li class="nav-link" ><a href="./index.html">Structure of soap</a></li>
                     <li class="nav-link" ><a href="./cleansingAction.html">Cleansing action of soap</a></li>
                     <li class="nav-link activeLink"><a href="#">Formation of micelle</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right h3">
-                    <li class="nav-link" style="padding-right: 10px;"><a href="" onclick="window.location.reload()">Reset Experiment</a></li>
+                    <li class="nav-link"><a href="" onclick="window.location.reload()">Reset Experiment</a></li>
                 </ul>
             </nav>
         </div>
@@ -31,10 +32,13 @@
             <div class="grid">
                 <div class="row">
                     <h1 class = "title" id="description">Formation of micelle at CMC.</h1>
+                    <!-- Instruction messages about how to perform the experiment -->
+                    <h3>Instructions:</h3>
                     <div id="procedureMessage">Click on the spoon to some add detergent to water</div>
                 </div>
             </div>
         </div>    
+        <!-- The main visual div -->
         <div class="dropping-objects" id="table">
             <img src="./images/bench.png" id="bench"/>
             <img src="./images/spoon.png" id="spoon3" onclick="moveSpoon()"/>
