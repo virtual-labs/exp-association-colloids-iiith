@@ -178,6 +178,7 @@ function moveGlassRod(expName){
             },4500);
         }else if(detergentAddCounter === 3){
             setTimeout(function(){
+                document.getElementById("instructions").innerHTML = "Observations:";
                 procedureMessage.innerHTML = "Watch the micelle formation below. Critical Micelle Concentration(CMC) achieved";
                 videoMessage.innerHTML = "molecular view of soap molecules at critical micelle concentration:";
                 videos.pause();
@@ -242,7 +243,8 @@ function moveClothWithStain(){
             translateY: '-17vw',
             opacity:'1'
         });
-        message = "Hence we get the clean cloth.";
+        message = "We get the clean cloth.";
+        document.getElementById("instructions").innerHTML = "Observations:";
         document.getElementById("procedureMessage").innerHTML = message;
     },8000);
     
