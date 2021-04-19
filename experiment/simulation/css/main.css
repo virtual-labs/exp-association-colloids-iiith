@@ -13,26 +13,31 @@
 .nav-link ,.nav ,.navbar-nav,.navbar ,.navbar-custom{
     padding-left: 15px;
     padding-right: 15px;
-    background-color: rgb(151, 202, 61);
-    color: rgb(21,100,156) ;
+    color: rgb(151, 202, 61);
+    background-color: rgb(21,100,156) ;
 }
-.nav-link{
-    padding: 0px;
-    border: 1px rgb(21,150,156) solid;
+.nav-link>a{
+    color:rgb(169,169,169);
 }
 
-.activeLink{
-    background-color: rgb(151, 220, 61);
+#activeLink{
+    color: rgb(151, 220, 61);
 }
 .nav>li>a:focus,.nav>li>a:hover{
-    background-color: rgb(151, 210, 61);
-    color: rgb(21,100,156) ;
+    color: rgb(151, 210, 61);
+    background-color: rgb(21,100,156) ;
 }
 
 #procedureMessage {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.4vw;
+}
+
+.instructionsBox{
+    padding: 0px 20px;
+    border-radius: 20px;
+    border: 3px solid rgb(151, 210, 61) ;
 }
 
 .molecularView, .dropping-objects{
