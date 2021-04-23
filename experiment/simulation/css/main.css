@@ -1,4 +1,4 @@
-#main{
+.main{
     display: flex; 
     justify-content: center; 
     align-items: center;
@@ -6,35 +6,36 @@
 
 .title {
     text-align: center;
+    margin-top: 5px;
     font-size: 2.5vw;
     z-index: -1;
 }
 
-.nav-link ,.nav ,.navbar-nav,.navbar ,.navbar-custom{
+.nav-link ,.navbar-nav,.navbar ,.navbar-custom{
     padding-left: 15px;
     padding-right: 15px;
-    color: rgb(151, 202, 61);
     background-color: rgb(21,100,156) ;
 }
-.nav-link>a{
+.nav-link{
     color:rgb(169,169,169);
 }
 
-#activeLink{
+.activeLink{
     color: rgb(151, 220, 61);
 }
-.nav>li>a:focus,.nav>li>a:hover{
+.navbar-nav>li>a:focus,.navbar-nav>li>a:hover{
     color: rgb(151, 210, 61);
     background-color: rgb(21,100,156) ;
 }
 
-#procedureMessage {
+.procedureMessage {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.4vw;
 }
 
 .instructionsBox{
+    margin-top: 10px;
     padding: 0px 20px;
     border-radius: 20px;
     border: 3px solid rgb(151, 210, 61) ;
@@ -45,15 +46,15 @@
 }
 
 
-#micelle-head{
+.micelle-head{
     margin-top: 70px;   
 }
 
-#micelle-tail{
+.micelle-tail{
     margin-top: 90px;
 }
 
-#micelle-head:hover, #micelle-tail:hover{
+.micelle-head:hover, .micelle-tail:hover{
     transform: scale(1.2);
     transition: all 1s ease;
 }
@@ -62,11 +63,11 @@
     padding-top: 60px;
 }
 
-#micelle-information{
+.micelle-information{
     font-size: 2vw;
 }
 
-#bench {
+.bench {
     z-index: -1;
     position: absolute;
     align-self: center; 
@@ -76,7 +77,7 @@
     left: 10vw;
 }
 
-#spoon1, #spoon2, #spoon3{
+.spoon1, .spoon2, .spoon3{
     position: absolute;
     align-self: center;
     object-fit: cover;
@@ -85,7 +86,7 @@
     width: 15vw;
 }
 
-#detergent1,#detergent2,#detergent3{
+.detergent1,.detergent2,.detergent3{
     position: absolute;
     align-self: center;
     object-fit: cover;
@@ -94,11 +95,11 @@
     width: 6vw;
 }
 
-#spoon2, #spoon3, #detergent2, #detergent3{
+.spoon2, .spoon3, .detergent2, .detergent3{
     opacity: 0;
 }
 
-#glassRod{
+.glassRod{
     z-index: -1;
     position: absolute;
     align-self: center;
@@ -109,7 +110,7 @@
     opacity: 0;
 }
 
-#clothWithStain{
+.clothWithStain{
     position: absolute;
     align-self: center;
     object-fit: cover;
@@ -119,7 +120,7 @@
     opacity: 0;
 }
 
-#plainCloth{
+.plainCloth{
     position: absolute;
     align-self: center;
     object-fit: cover;
@@ -129,7 +130,7 @@
     opacity: 0;
 }
 
-#videoMessage{
+.videoMessage{
     position: absolute; 
     top: 45vw;
     left: 20%;
@@ -137,7 +138,8 @@
     display: none;
 }
 
-#videos{
+.videos{
+    z-index: -10;
     position: absolute;
     top: 55vw;
     display: none;
@@ -150,46 +152,46 @@
     .a-btn{
         font-size: 3vw;
     }
-    #micelle-tail{
+    .micelle-tail{
         margin-top: 80px;
         width: 150px;
     }
-    #micelle-head{
+    .micelle-head{
         width: 50px;
     }
-    #micelle-information{
+    .micelle-information{
         font-size: 5vw;
     }
-    #procedureMessage{
+    .procedureMessage{
         font-size: 3vw;
     }
-    #videoMessage{
+    .videoMessage{
         left: 10%;
         font-size: 4vw;
     }
 }
 
 @media only screen and (min-width: 1200px){
-    #bench {
+    .bench {
         z-index: -1;
         top: 10vw;
         width: 50vw;
         left: 10vw;
     }
     
-    #spoon1, #spoon2, #spoon3{
+    .spoon1, .spoon2, .spoon3{
         top: 1vw;
         right: 25vw;
         width: 7vw;
     }
     
-    #detergent1,#detergent2,#detergent3{
+    .detergent1,.detergent2,.detergent3{
         top: 2vw;
         right: 29vw;
         width: 3vw;
     }
 
-    #glassRod{
+    .glassRod{
         z-index: -1;
         top: 12vw;
         left: 19vw;
@@ -197,27 +199,27 @@
         opacity: 0;
     }
     
-    #clothWithStain{
+    .clothWithStain{
         top: 2vw;
         left: 23vw;
         width: 4vw;
         opacity: 0;
     }
     
-    #plainCloth{
+    .plainCloth{
         top: 20vw;
         left: 23vw;
         width: 4vw;
         opacity: 0;
     }
 
-    #videoMessage{
+    .videoMessage{
         top: 7vw;
         left: 70vw;
         width: 20%;
         font-size: 1vw;
     }
-    #videos{
+    .videos{
         top: 10vw;
         left: 70vw;
         width: 20%;
