@@ -11,37 +11,27 @@
     z-index: -1;
 }
 
-.nav-link ,.navbar-nav,.navbar ,.navbar-custom{
-    padding-left: 15px;
-    padding-right: 15px;
-    background-color: rgb(21,100,156) ;
-}
-.nav-link{
-    color:rgb(169,169,169);
+.reset-btn{
+    position: absolute;
+    bottom: 30px;
+    right: 50%;
 }
 
-.activeLink{
-    color: rgb(151, 220, 61);
-}
-.navbar-nav>li>a:focus,.navbar-nav>li>a:hover{
-    color: rgb(151, 210, 61);
-    background-color: rgb(21,100,156) ;
-}
-
-.procedureMessage {
+.procedure-message {
+    margin-top: 10px;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.4vw;
 }
 
-.instructionsBox{
+.instructions-box{
     margin-top: 10px;
     padding: 0px 20px;
     border-radius: 20px;
     border: 3px solid rgb(151, 210, 61) ;
 }
 
-.molecularView, .dropping-objects{
+.molecular-view, .dropping-objects{
     position: relative;
 }
 
@@ -63,11 +53,11 @@
     padding-top: 60px;
 }
 
-.micelle-information{
+#micelle-information{
     font-size: 2vw;
 }
 
-.bench {
+#bench {
     z-index: -1;
     position: absolute;
     align-self: center; 
@@ -77,7 +67,7 @@
     left: 10vw;
 }
 
-.spoon1, .spoon2, .spoon3{
+#spoon{
     position: absolute;
     align-self: center;
     object-fit: cover;
@@ -86,7 +76,7 @@
     width: 15vw;
 }
 
-.detergent1,.detergent2,.detergent3{
+#detergent{
     position: absolute;
     align-self: center;
     object-fit: cover;
@@ -95,11 +85,7 @@
     width: 6vw;
 }
 
-.spoon2, .spoon3, .detergent2, .detergent3{
-    opacity: 0;
-}
-
-.glassRod{
+#glass-rod{
     z-index: -1;
     position: absolute;
     align-self: center;
@@ -110,7 +96,7 @@
     opacity: 0;
 }
 
-.clothWithStain{
+#cloth-with-stain{
     position: absolute;
     align-self: center;
     object-fit: cover;
@@ -120,7 +106,7 @@
     opacity: 0;
 }
 
-.plainCloth{
+#plain-cloth{
     position: absolute;
     align-self: center;
     object-fit: cover;
@@ -130,7 +116,7 @@
     opacity: 0;
 }
 
-.videoMessage{
+.video-message{
     position: absolute; 
     top: 45vw;
     left: 20%;
@@ -145,12 +131,9 @@
     display: none;
 }
 
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 750px){
     .title{
         font-size: 5vw;
-    }
-    .a-btn{
-        font-size: 3vw;
     }
     .micelle-tail{
         margin-top: 80px;
@@ -159,39 +142,45 @@
     .micelle-head{
         width: 50px;
     }
-    .micelle-information{
+    #micelle-information{
         font-size: 5vw;
     }
-    .procedureMessage{
+    .procedure-message{
         font-size: 3vw;
     }
-    .videoMessage{
+    .video-message{
         left: 10%;
         font-size: 4vw;
     }
 }
 
-@media only screen and (min-width: 1200px){
-    .bench {
+@media only screen and (max-width:900px){
+    .procedure-message{
+        font-size: 3vw;
+    }
+}
+
+@media only screen and (min-width: 900px){
+    #bench {
         z-index: -1;
         top: 10vw;
         width: 50vw;
         left: 10vw;
     }
     
-    .spoon1, .spoon2, .spoon3{
+    #spoon{
         top: 1vw;
         right: 25vw;
         width: 7vw;
     }
     
-    .detergent1,.detergent2,.detergent3{
+    #detergent{
         top: 2vw;
         right: 29vw;
         width: 3vw;
     }
 
-    .glassRod{
+    #glass-rod{
         z-index: -1;
         top: 12vw;
         left: 19vw;
@@ -199,30 +188,33 @@
         opacity: 0;
     }
     
-    .clothWithStain{
+    #cloth-with-stain{
         top: 2vw;
         left: 23vw;
         width: 4vw;
         opacity: 0;
     }
     
-    .plainCloth{
+    #plain-cloth{
         top: 20vw;
         left: 23vw;
         width: 4vw;
         opacity: 0;
     }
 
-    .videoMessage{
+    .video-message{
         top: 7vw;
         left: 70vw;
         width: 20%;
-        font-size: 1vw;
+        font-size: 1.8vw;
     }
     .videos{
-        top: 10vw;
-        left: 70vw;
+        left: 68vw;
+        top: 15vw;
         width: 20%;
         right: -30vw;
+    }
+    .procedure-message{
+        font-size: 2vw;
     }
 }
