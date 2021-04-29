@@ -1,96 +1,86 @@
+'use strict';
 let detergentAddCounter = 1;
 
 // disable onclick of all components except of spoon and detergent
-if(document.getElementById("clothWithStain")){
-    document.getElementById("clothWithStain").style.pointerEvents = 'none';
+if(document.getElementById("cloth-with-stain")){
+    document.getElementById("cloth-with-stain").style.pointerEvents = 'none';
 }
-if(document.getElementById("glassRod")){
-    document.getElementById("glassRod").style.pointerEvents = 'none';
+if(document.getElementById("glass-rod")){
+    document.getElementById("glass-rod").style.pointerEvents = 'none';
 }
-if(document.getElementById("spoon2")){
-    document.getElementById("spoon2").style.pointerEvents = 'none';
-}
-if(document.getElementById("detergent2")){
-    document.getElementById("detergent2").style.pointerEvents = 'none';
-}
-if(document.getElementById("spoon3")){
-    document.getElementById("spoon3").style.pointerEvents = 'none';
-}
-if(document.getElementById("detergent3")){
-    document.getElementById("detergent3").style.pointerEvents = 'none';
-}
-
 
 // Functions for structure of soap part.
 // below function shows information about micelle parts when hovered upon
 function showMicelleInformation(part){
-    let tailInfo = document.getElementById("micelle-information");
-    Info = "";
+    'use strict';
+    const tailInfo = document.getElementById("micelle-information");
+    let info = "";
     if(part === 'tail'){
-        Info = "Hydrocarbon Chain(C<sub>7</sub>H<sub>35</sub>) </br> </br> Hydrophobic </br> (Water Repelling)";
+        info = "Hydrocarbon Chain(C<sub>7</sub>H<sub>35</sub>) </br> </br> Hydrophobic </br> (Water Repelling)";
     }else if(part === 'head'){
-        Info = "Ionic End(COO<sup>-</sup>Na<sup>+</sup>) </br> </br> Hydrophilic </br> (Water Attracting)";
+        info = "Ionic End(COO<sup>-</sup>Na<sup>+</sup>) </br> </br> Hydrophilic </br> (Water Attracting)";
     }
-    tailInfo.innerHTML = Info;
+    tailInfo.innerHTML = info;
 }
 // The below functions hide the information about the micelle parts 
 // when cursor is not above them.
-function hideTailInformation(){
-    let tailInfo = document.getElementById("micelle-information");
-    tailInfo.innerHTML = "";
-}
-
-function hideHeadInformation(){
-    let headInfo = document.getElementById("micelle-information");
-    headInfo.innerHTML = "";
+function hideInformation(){
+    'use strict';
+    const info = document.getElementById("micelle-information");
+    info.innerHTML = "";
 }
 
 // Functions of Cleansing action
 // Below function moves the spoon and detergent from 
 // top right corner towards the beaker.
 function moveSpoon(){
-    let procedureMessage = document.getElementById("procedureMessage")
-    let SCREENWIDTH = window.innerWidth
+    'use strict';
+    const procedureMessage = document.getElementsByClassName("procedure-message")[0]
+    const screenWidth = window.innerWidth
     let changeYForDetergent = '24vw';
-    if(SCREENWIDTH > 1200){
+    if(screenWidth > 1200){
         changeYForDetergent = '19vw';
     }
 
     // disable onclick of spoon and detergent
-    document.getElementById("spoon"+detergentAddCounter).style.pointerEvents = 'none';
-    document.getElementById("detergent"+detergentAddCounter).style.pointerEvents = 'none';
+    document.getElementById("spoon").style.pointerEvents = 'none';
+    document.getElementById("detergent").style.pointerEvents = 'none';
     
     // enable onclick of glass rod
-    document.getElementById("glassRod").style.pointerEvents = 'auto';
+    document.getElementById("glass-rod").style.pointerEvents = 'auto';
     
-    let a1 = anime.timeline({
+    const a1 = anime.timeline({
         duration: 800,
         easing: 'linear'
     });
     a1.add({
-        targets: '#spoon'+detergentAddCounter+', #detergent'+detergentAddCounter,
+        targets: '#spoon, #detergent',
         translateX: '-45vw',
         translateY: '10vw',
     }).add({
-        targets: '#spoon'+detergentAddCounter+', #detergent'+detergentAddCounter,
+        targets: '#spoon, #detergent',
         rotateX: '30'
     }).add({
-        targets: '#detergent'+detergentAddCounter,
+        targets: '#detergent',
         translateY: changeYForDetergent,
         opacity: '0.5'
     }).add({
-        targets: '#spoon'+detergentAddCounter,
+        targets: '#spoon',
         translateX: '0vw',
         opacity:'0'
     }).add({
         update: function(anim) {
-            message = "Mix the detergent by clicking on the glass rod";
+            const message = "Mix the detergent by clicking on the glass rod";
             procedureMessage.innerHTML = message;
         }
     }).add({
-        duration:'1',
-        targets:'#glassRod',
+        duration:'0.1',
+        targets:'#glass-rod',
         opacity:'0.6'
+    }).add({
+        targets: '#spoon',
+        translateY: '0vw',
+        rotateX:'0'
     });
 
     
@@ -98,31 +88,39 @@ function moveSpoon(){
 
 // This function simulates the action of mixing the solution with a glass rod.
 function moveGlassRod(expName){
-    let procedureMessage = document.getElementById("procedureMessage"); 
-    let videoMessage = document.getElementById("videoMessage");
-    let videos = document.getElementById("videos");
+    'use strict';
+    const procedureMessage = document.getElementsByClassName("procedure-message")[0]; 
+    const videoMessage = document.getElementsByClassName("video-message")[0];
+    const videos = document.getElementsByClassName("videos")[0];
     
     // disable onclick of glass rod
-    document.getElementById("glassRod").style.pointerEvents = 'none';
+    document.getElementById("glass-rod").style.pointerEvents = 'none';
 
-    let a1=anime.timeline({
+    const a1=anime.timeline({
         duration: 1000,
         easing: 'easeInOutSine',
         direction: 'alternate',
         loop: 4
     });
     a1.add({
-        targets: '#glassRod',
+        targets: '#glass-rod',
         rotate: [10, -10]
     });
-    let a2 = anime({
-        targets: "#detergent"+detergentAddCounter,
+    const a2 = anime({
+        targets: "#detergent",
         delay: '3000',
         easing: 'linear',
         opacity: '0'
+    })
+    const detergentAnime = anime({
+        targets: "#detergent",
+        delay:'3700',
+        translateY:'0vw',
+        translateX:'0vw',
+        rotateX:'0'
     });
-    let a3 = anime({
-        targets: '#glassRod',
+    const a3 = anime({
+        targets: '#glass-rod',
         delay: '4000',
         easing: 'linear',
         opacity: '0',
@@ -131,54 +129,47 @@ function moveGlassRod(expName){
     // There are two experiments which use the same function and hence this if else conditions.
     if (expName === "cleansingAction"){
         // enable onclick of stained cloth
-        document.getElementById("clothWithStain").style.pointerEvents = 'auto';
+        document.getElementById("cloth-with-stain").style.pointerEvents = 'auto';
         setTimeout(function(){
-            message = "Watch the molecular view of soap molecules in water below and then click on the dirty cloth";
+            const message = "Watch the molecular view of soap molecules in water. Click on the dirty cloth";
             videoMessage.style.display = 'block';
             videos.style.display = 'block';
             procedureMessage.innerHTML = message;
         },4000);
-        let a4 = anime({
-            targets : "#clothWithStain",
+        const a4 = anime({
+            targets : "#cloth-with-stain",
             delay: '4000',
             easing: 'linear',
             opacity: '1'
         });
     }
     else if(expName === "micelleFormation"){
-        if(detergentAddCounter === 1){
-            let spoon2 = document.getElementById("spoon2");
-            let detergent2 = document.getElementById("detergent2");
+        const videoSource = document.getElementsByClassName("videoSource")[0];
+        if(detergentAddCounter === 1 || detergentAddCounter === 2){
+            const spoon = document.getElementById("spoon");
+            const detergent = document.getElementById("detergent");
             setTimeout(function(){
-                spoon2.style.opacity = '1';
-                spoon2.style.pointerEvents = 'auto';
-                detergent2.style.opacity = '1';
-                detergent2.style.pointerEvents = 'auto';
-                detergentAddCounter++;
+                spoon.style.opacity = '1';
+                spoon.style.pointerEvents = 'auto';
+                detergent.style.opacity = '1';
+                detergent.style.pointerEvents = 'auto';
                 procedureMessage.innerHTML = "watch the molecular view below and add some more detergent.";
                 videoMessage.style.display = 'block';
                 videos.style.display = 'block';
-                videoMessage.innerHTML = "molecular view of soap molecules at low concentration:";
-            },4500);
-        }else if(detergentAddCounter === 2){
-            let spoon3 = document.getElementById("spoon3");
-            let detergent3 = document.getElementById("detergent3");
-            setTimeout(function(){
-                spoon3.style.opacity = '1';
-                spoon3.style.pointerEvents = 'auto';
-                detergent3.style.opacity = '1';
-                detergent3.style.pointerEvents = 'auto';
+                if(detergentAddCounter === 1){
+                    videoMessage.innerHTML = "molecular view of soap molecules at low concentration:";
+                }else if(detergentAddCounter === 2){
+                    videoMessage.innerHTML = "Molecular view of soap molecules at medium concentration.";
+                    videos.pause();
+                    videoSource.setAttribute('src','./images/videos/MolecularView.mp4');
+                    videos.load();
+                    videos.play();
+                }
                 detergentAddCounter++;
-                procedureMessage.innerHTML = "watch the molecular view below and add some more detergent.";
-                videoMessage.innerHTML = "Molecular view of soap molecules at medium concentration.";
-                videos.pause();
-                videoSource.setAttribute('src','./images/videos/MolecularView.mp4');
-                videos.load();
-                videos.play();
             },4500);
         }else if(detergentAddCounter === 3){
             setTimeout(function(){
-                document.getElementById("instructions").innerHTML = "Observations:";
+                document.getElementsByClassName("instructions")[0].innerHTML = "Observations:";
                 procedureMessage.innerHTML = "Watch the micelle formation below. Critical Micelle Concentration(CMC) achieved";
                 videoMessage.innerHTML = "molecular view of soap molecules at critical micelle concentration:";
                 videos.pause();
@@ -193,27 +184,28 @@ function moveGlassRod(expName){
 
 // This function simulates the movement of the cloth with stain into the detergent solution
 function moveClothWithStain(){
-    let videos = document.getElementById("videos");
-    let videoSource = document.getElementById("videoSource");
-    let videoMessage = document.getElementById("videoMessage");
-    let procedureMessage = document.getElementById("procedureMessage");
-    let SCREENWIDTH = window.innerWidth;
+    'use strict';
+    const videos = document.getElementsByClassName("videos")[0];
+    const videoSource = document.getElementsByClassName("videoSource")[0];
+    const videoMessage = document.getElementsByClassName("video-message")[0];
+    const procedureMessage = document.getElementsByClassName("procedure-message")[0];
+    const screenWidth = window.innerWidth;
     let changeYForCloth = '28vw';
-    if(SCREENWIDTH > 1200){
+    if(screenWidth > 1200){
         changeYForCloth = '22vw';
     }
 
     procedureMessage.innerHTML = "Watch the molecular view of cleaning action of soap below";
 
     // disable onclick of stained cloth.
-    document.getElementById("clothWithStain").style.pointerEvents = 'none';
+    document.getElementById("cloth-with-stain").style.pointerEvents = 'none';
 
-    let a1 = anime.timeline({
+    const a1 = anime.timeline({
         duration: '1000',
         easing: 'linear'
     });
     a1.add({
-        targets:'#clothWithStain',
+        targets:'#cloth-with-stain',
         rotateX:'40',
         translateY: changeYForCloth,
         opacity: '0.6'
@@ -226,26 +218,26 @@ function moveClothWithStain(){
         videoMessage.innerHTML = "Cleansing action of soap molecules and formation of micelle:";
     },800);
     setTimeout(function(){
-        let a2 = anime.timeline({
+        const a2 = anime.timeline({
             duration: '0',
             easing:'linear'
         })
         a2.add({
-            targets: '#clothWithStain',
+            targets: '#cloth-with-stain',
             opacity:'0'
         }).add({
-            targets:'#plainCloth',
+            targets:'#plain-cloth',
             opacity:'0.6'
         })
         .add({
             duration: '2000',
-            targets: '#plainCloth',
+            targets: '#plain-cloth',
             translateY: '-17vw',
             opacity:'1'
         });
-        message = "We get the clean cloth.";
-        document.getElementById("instructions").innerHTML = "Observations:";
-        document.getElementById("procedureMessage").innerHTML = message;
+        const message = "We get the clean cloth.";
+        document.getElementsByClassName("instructions")[0].innerHTML = "Observations:";
+        document.getElementsByClassName("procedure-message")[0].innerHTML = message;
     },8000);
     
 }

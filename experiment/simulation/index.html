@@ -1,50 +1,45 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset = "utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Add CSS at the head of HTML file -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="./css/main.css">
-    <title>Structure Of Soap</title>
+    <head>
+        <meta charset = "utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./css/main.css">
+        <title>Structure Of Soap</title>
 
-</head>
+    </head>
     <body>
-		<!-- Your code goes here-->
         <div class="container-fluid links" >
-            <nav class="navbar navbar-custon">
-                <ul class="nav navbar-nav h3">
-                    <!-- Links for other parts of experiment -->
-                    <li class="nav-link"><a id="activeLink" href="#" >Structure of soap</a></li>
-                    <li class="nav-link" ><a href="./cleansingAction.html">Cleansing action of soap</a></li>
-                    <li class="nav-link"><a href="./micelleFormation.html">Formation of micelle</a></li>
-                </ul>
-            </nav>
+            <ul class="nav nav-tabs h3">
+                <!-- Links for other parts of experiment -->
+                <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#" >Structure of Soap</a></li>
+                <li class="nav-item"><a class="nav-link" href="./cleansingAction.html">Cleansing Action of Soap</a></li>
+                <li class="nav-item"><a class="nav-link" href="./micelleFormation.html">Formation of Micelle</a></li>
+            </ul>
         </div>
-        <div class="container justify-content-center" id="main">
+        <div class="container justify-content-center main">
             <div class="grid">
                 <div class="row">
                     <!-- Instruction messages about how to perform the experiment -->
-                    <div class="instructionsBox">
-                        <h3 id="instructions">Instructions:</h3>
-                        <div id = "procedureMessage">Move your pointer over individual parts parts of soap molecule below to see their description...</div>
+                    <div class="instructions-box">
+                        <h3 class="instructions">Instructions:</h3>
+                        <div class="procedure-message">Move your pointer over individual parts parts of soap molecule below to see their description...</div>
                     </div>
                 </div>
                 <!-- The main visual div -->
-                <div class="row text-center" style="font-size: 0;">
-                    <img id="micelle-tail" onmouseover="showMicelleInformation('tail')" onmouseout="hideTailInformation()" src="./images/tail.svg" alt="Micelle tail">
-                    <img id="micelle-head" onmouseover="showMicelleInformation('head')" onmouseout="hideHeadInformation()" src="./images/head.svg" alt="Micelle head">
+                <div class="row mx-auto justify-content-center">
+                    <img class="micelle-tail" onmouseover="showMicelleInformation('tail')" onmouseout="hideInformation()" src="./images/tail.svg" alt="Micelle tail">
+                    <img class="micelle-head" onmouseover="showMicelleInformation('head')" onmouseout="hideInformation()" src="./images/head.svg" alt="Micelle head">
                 </div>
                 <div class="row text-center justify-content-center">
                     <div id="micelle-information"></div>
                 </div>
             </div>
         </div>    
-	<!-- Add JS at the bottom of HTML file --> 
         <script src="./js/main.js"></script>
     </body> 
 </html>

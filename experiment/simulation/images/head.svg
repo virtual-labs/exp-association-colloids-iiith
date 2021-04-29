@@ -5,5 +5,5 @@
 	<style>
 		tspan { white-space:pre }
 	</style>
-	<use id="Layer 1" href="#img1" x="0" y="0" />
+	<use id="layer 1" href="#img1" x="0" y="0" />
 </svg>
