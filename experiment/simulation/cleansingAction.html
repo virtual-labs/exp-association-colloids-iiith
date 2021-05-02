@@ -9,37 +9,46 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="./css/main.css">
-        <title>Structure Of Soap</title>
+        <title>Cleansing action</title>
 
     </head>
     <body>
-        <div class="container-fluid links" >
+        <div class="container-fluid links">
             <ul class="nav nav-tabs h3">
                 <!-- Links for other parts of experiment -->
-                <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#" >Structure of Soap</a></li>
-                <li class="nav-item"><a class="nav-link" href="./cleansingAction.html">Cleansing Action of Soap</a></li>
+                <li class="nav-item"><a class="nav-link" href="./index.html">Structure of Soap</a></li>
+                <li class="nav-item" ><a class="nav-link active" data-toggle="tab" href="#">Cleansing Action of Soap</a></li>
                 <li class="nav-item"><a class="nav-link" href="./micelleFormation.html">Formation of Micelle</a></li>
             </ul>
         </div>
         <div class="container justify-content-center main">
             <div class="grid">
+                <!-- Instruction messages about how to perform the experiment -->
                 <div class="row">
-                    <!-- Instruction messages about how to perform the experiment -->
                     <div class="instructions-box">
                         <h3 class="instructions">Instructions:</h3>
-                        <div class="procedure-message">Move your pointer over individual parts parts of soap molecule below to see their description...</div>
+                        <div class="procedure-message">Click on the spoon to add detergent to water</div>
                     </div>
-                </div>
-                <!-- The main visual div -->
-                <div class="row mx-auto justify-content-center">
-                    <img class="micelle-tail" onmouseover="showMicelleInformation('tail')" onmouseout="hideInformation()" src="./images/tail.svg" alt="Micelle tail">
-                    <img class="micelle-head" onmouseover="showMicelleInformation('head')" onmouseout="hideInformation()" src="./images/head.svg" alt="Micelle head">
-                </div>
-                <div class="row text-center justify-content-center">
-                    <div id="micelle-information"></div>
                 </div>
             </div>
         </div>    
+        <!-- The main visual div -->
+        <div class="dropping-objects">
+            <img src="./images/bench.png" id="bench"/>
+            <img src="./images/spoon.png" id="spoon" onclick="moveSpoon()"/>
+            <img src="./images/Detergent.png" id="detergent" onclick="moveSpoon()"/>
+            <img src="./images/glassRod.png" id="glass-rod" onclick="moveGlassRod('cleansingAction')"/>
+            <img src="./images/clothWithStain.png" id="cloth-with-stain" onclick="moveClothWithStain()"/> 
+            <img src="./images/plainCloth.png" id="plain-cloth"/>
+            <div class="molecular-view">
+                <div class="video-message">Molecular view of soap molecules in water:</div>  
+                <video class="videos"  width="100%" height="240"  autoplay	muted loop>
+                    <source class="videoSource" src="./images/videos/MolecularView.mp4" type="video/mp4"/>
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        <button class="btn btn-primary btn-lg reset-btn" type="button" href="" onclick="window.location.reload()">reset</button>
         <script src="./js/main.js"></script>
-    </body> 
+    </body>
 </html>
