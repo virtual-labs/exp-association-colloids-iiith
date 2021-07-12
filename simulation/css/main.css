@@ -1,0 +1,220 @@
+.main{
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.title {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 2.5vw;
+    z-index: -1;
+}
+
+.reset-btn{
+    position: absolute;
+    bottom: 30px;
+    right: 50%;
+}
+
+.procedure-message {
+    margin-top: 10px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4vw;
+}
+
+.instructions-box{
+    margin-top: 10px;
+    padding: 0px 20px;
+    border-radius: 20px;
+    border: 3px solid rgb(151, 210, 61) ;
+}
+
+.molecular-view, .dropping-objects{
+    position: relative;
+}
+
+
+.micelle-head{
+    margin-top: 70px;   
+}
+
+.micelle-tail{
+    margin-top: 90px;
+}
+
+.micelle-head:hover, .micelle-tail:hover{
+    transform: scale(1.2);
+    transition: all 1s ease;
+}
+
+.img-micelle{
+    padding-top: 60px;
+}
+
+#micelle-information{
+    font-size: 2vw;
+}
+
+#bench {
+    z-index: -1;
+    position: absolute;
+    align-self: center; 
+    object-fit: cover;
+    top: 10vw;
+    width: 78vw;
+    left: 10vw;
+}
+
+#spoon{
+    position: absolute;
+    align-self: center;
+    object-fit: cover;
+    top: 1vw;
+    right: 10vw;
+    width: 15vw;
+}
+
+#detergent{
+    position: absolute;
+    align-self: center;
+    object-fit: cover;
+    top: 3vw;
+    right: 19vw;
+    width: 6vw;
+}
+
+#glass-rod{
+    z-index: -1;
+    position: absolute;
+    align-self: center;
+    object-fit: cover;
+    top: 13vw;
+    left: 24vw;
+    width: 19vw;
+    opacity: 0;
+}
+
+#cloth-with-stain{
+    position: absolute;
+    align-self: center;
+    object-fit: cover;
+    top: 3vw;
+    left: 29vw;
+    width: 6vw;
+    opacity: 0;
+}
+
+#plain-cloth{
+    position: absolute;
+    align-self: center;
+    object-fit: cover;
+    top: 25vw;
+    left: 29vw;
+    width: 7vw;
+    opacity: 0;
+}
+
+.video-message{
+    position: absolute; 
+    top: 45vw;
+    left: 20%;
+    font-size: 3vw;
+    display: none;
+}
+
+.videos{
+    z-index: -10;
+    position: absolute;
+    top: 55vw;
+    display: none;
+}
+
+@media only screen and (max-width: 750px){
+    .title{
+        font-size: 5vw;
+    }
+    .micelle-tail{
+        margin-top: 80px;
+        width: 150px;
+    }
+    .micelle-head{
+        width: 50px;
+    }
+    #micelle-information{
+        font-size: 5vw;
+    }
+    .procedure-message{
+        font-size: 3vw;
+    }
+    .video-message{
+        left: 10%;
+        font-size: 4vw;
+    }
+}
+
+@media only screen and (max-width:900px){
+    .procedure-message{
+        font-size: 3vw;
+    }
+}
+
+@media only screen and (min-width: 900px){
+    #bench {
+        z-index: -1;
+        top: 10vw;
+        width: 50vw;
+        left: 10vw;
+    }
+    
+    #spoon{
+        top: 1vw;
+        right: 25vw;
+        width: 7vw;
+    }
+    
+    #detergent{
+        top: 2vw;
+        right: 29vw;
+        width: 3vw;
+    }
+
+    #glass-rod{
+        z-index: -1;
+        top: 12vw;
+        left: 19vw;
+        width: 12vw;
+        opacity: 0;
+    }
+    
+    #cloth-with-stain{
+        top: 2vw;
+        left: 23vw;
+        width: 4vw;
+        opacity: 0;
+    }
+    
+    #plain-cloth{
+        top: 20vw;
+        left: 23vw;
+        width: 4vw;
+        opacity: 0;
+    }
+
+    .video-message{
+        top: 7vw;
+        left: 70vw;
+        width: 20%;
+        font-size: 1.8vw;
+    }
+    .videos{
+        left: 68vw;
+        top: 15vw;
+        width: 20%;
+        right: -30vw;
+    }
+    .procedure-message{
+        font-size: 2vw;
+    }
+}
