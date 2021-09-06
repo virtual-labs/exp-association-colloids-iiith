@@ -1,4 +1,4 @@
-**Pre-experiment Quiz**
+**Pre-Assignment**
 
 1. How do stable assemblies of micelles form though the ionic head groups are supposed to repel each other?  
 2. How will the surface tension of a solution vary with the increase in surfactant concentration and why?  
@@ -6,7 +6,7 @@
 4. The aggregation numbers for nonionic surfactant molecules are often more than that for ionic surfactants. Why?  
 5. Which ion, the cation or the anion, of an anionic surfactant will reduce the surface tension of water when dissolved in it?  
 
-**Post-experiment Quiz**
+**Post-Assignment**
 
 1. Can one prepare ionic micelle below the Kraft Temperature?  
 2. Will there be formation of micelles if one dissolves more than the CMC of a surfactant all at once (not little by little) in water?  
