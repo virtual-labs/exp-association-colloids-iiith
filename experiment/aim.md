@@ -6,7 +6,5 @@ Surfactant molecules have two parts: a nonpolar part, made of chains of carbon a
 
 When dissolved in a polar solvent like water, surfactant molecules accumulate at the surface (interface) of the two fluids and modify the properties of the surface (for example, reduce the surface tension of water). These molecules are therefore known as **surf**ace-**act**ive **a**ge**nts** (also briefly as **surfactants**). Surfactants find many applications in our day-to-day life to the industry. For example, sodium lauryl sulphate is a synthetic anionic detergent used in toothpastes, shampoos, and laundry soaps. Many cationic and non-ionic detergents are used in hair conditioners and ‘no tear shampoo’. Many cationic detergents have germicidal properties and are used in hospital disinfectants, mouthwashes and certain eye-wetting solutions. High concentration surfactant solutions are used as drug carriers and micro-reactors for chemical synthesis and in froth flotation, petroleum recovery, etc.   
 
-To demonstrate how micelles, one kind of association colloids, form and participate in the cleansing action of soap and detergents.  
-
 
 
