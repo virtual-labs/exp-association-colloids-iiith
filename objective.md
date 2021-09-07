@@ -1,0 +1,1 @@
+- To demonstrate how micelles, one kind of association colloids, form and participate in the cleansing action of soap and detergents.  
