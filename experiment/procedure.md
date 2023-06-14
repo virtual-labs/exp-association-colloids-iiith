@@ -12,3 +12,4 @@
 1. Take a 1L beaker and fill it with 500ml water  
 2. Add a spoon of detergent and stir it with a stirrer until the detergent dissolves completely.  
 3. Repeat step 2 until a physical change is observed in the solution.  
+

@@ -8,3 +8,6 @@ When dissolved in a polar solvent like water, surfactant molecules accumulate at
 
 
 
+
+
+
